@@ -1,0 +1,19 @@
+{
+  "name": "stm-notification-center",
+  "version": "1.0.0",
+  "description": "Display notifications in tooltips",
+  "main": "notification-center.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartTeleMax/stm-notification-center.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SmartTeleMax/stm-notification-center/issues"
+  },
+  "homepage": "https://github.com/SmartTeleMax/stm-notification-center#readme"
+}
