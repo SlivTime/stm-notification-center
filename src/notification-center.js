@@ -3,6 +3,7 @@
 
 'use strict';
 
+require('core-js/es5');
 var $ = require('jquery');
 
 export class Notification {
@@ -36,12 +37,12 @@ export class NotificationCenter {
         this.container = options.container;
         this.messages = [];
         this.timeout = options.timeout || 4000;
+        this.animationY = options.animationY === undefined ? 60 : options.animationY;
+        this.animationDuration = options.animationDuration || 1000;
 
         if (NotificationCenter.prototype._singletonInstance) {
             return NotificationCenter.prototype._singletonInstance;
         }
-
-
 
         NotificationCenter._singletonInstance = this;
 
@@ -69,7 +70,8 @@ export class NotificationCenter {
 
         if (!this.isShowing) {
             this.holder.show();
-            this.holder.stop(true).animate({top: this.holder.startTop + 60}, 1000);
+            var newTop = this.holder.startTop + this.animationY;
+            this.holder.stop(true).animate({top: newTop}, this.animationDuration);
         }
         this.isShowing = true;
 
@@ -78,7 +80,7 @@ export class NotificationCenter {
         }
 
         this.hideTimeout = setTimeout(function () {
-            this.holder.stop(true).animate({top: this.holder.startTop}, 1000, function () {
+            this.holder.stop(true).animate({top: this.holder.startTop}, this.animationDuration, function () {
                 this.isShowing = false;
                 this.holder.hide();
                 notification.hide();
