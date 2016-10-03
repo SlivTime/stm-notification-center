@@ -3,6 +3,8 @@
 
 'use strict';
 
+var $ = require('jquery');
+
 export class Notification {
 
     constructor(message, container) {
