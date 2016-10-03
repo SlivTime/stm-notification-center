@@ -40,8 +40,8 @@ export class NotificationCenter {
         this.animationY = options.animationY === undefined ? 60 : options.animationY;
         this.animationDuration = options.animationDuration || 1000;
 
-        if (NotificationCenter.prototype._singletonInstance) {
-            return NotificationCenter.prototype._singletonInstance;
+        if (NotificationCenter._singletonInstance) {
+            return NotificationCenter._singletonInstance;
         }
 
         NotificationCenter._singletonInstance = this;

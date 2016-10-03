@@ -4,6 +4,7 @@
   "description": "Display notifications in tooltips",
   "main": "lib/notification-center.js",
   "scripts": {
+    "test": "npm run compile && mochify",
     "compile": "rimraf lib/* && babel src -d lib",
     "prepublish": "npm run compile"
   },
@@ -24,6 +25,8 @@
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
+    "chai": "^3.5.0",
+    "mochify": "^2.18.1",
     "rimraf": "^2.5.4"
   }
 }
