@@ -1,0 +1,35 @@
+.notifications
+	background: $green
+	color: #ffffff
+	position: fixed
+	z-index: 1219
+	// Reader has 9999
+	min-height: 30px
+	max-height: 360px
+	top: 0
+	left: 0
+	right: 0
+	overflow: hidden
+	padding: 15px 0
+	line-height: 26px
+	+transform(translate3d(0, 0, 0))
+	+r(wide)
+		z-index: 1219
+	+mob
+		top: -60px
+	.is-viewing &,
+	.is-search &
+		z-index: 10010
+		top: 0 !important
+
+.notification
+	width: 680px
+	padding-left: 160px
+	overflow: hidden
+	text-overflow: ellipsis
+	+mob
+		width: auto
+		padding: 0 20px
+		text-align: center
+
+
