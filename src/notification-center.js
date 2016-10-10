@@ -1,4 +1,5 @@
-/*jslint esversion: 6, -W097, browser: true */
+/* jslint esversion: 6, -W097, browser: true */
+/* globals require */
 
 'use strict';
 
